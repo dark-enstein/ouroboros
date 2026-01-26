@@ -1,21 +1,23 @@
+from core.db import get_user
+from core.type import UserData
+from core.models import Engine
+
 class User:
-    tree = None
+    tree = UserData
+    engine = Engine
     def embedding(self):
         # concat all other individual gets
-        tree = None
+        tree = get_user()
 
     def get_profile_embedding(self):
-        pass
+        return self.tree.profile
     def get_real_graph(self):
-        pass
+        return self.tree.socialgraph
     def get_anti_signals(self):
-        pass
-
-    def fetch_innetwork_posts(dataset_embed):
-        pass
+        return self.tree.anti_filters
 
     def filter(self, hydrated_posts):
-        pass
+        return self.engine.rank_k_profiles(hydrated_posts, self.tree.profile, self.tree.socialgraph, self.tree.anti_filters)
 
     def get_engagement(self):
         pass

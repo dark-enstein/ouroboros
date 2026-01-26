@@ -1,0 +1,199 @@
+{  "posts_5": [
+    {
+      "id": "post_001",
+      "title": "Getting Started",
+      "owner": "alice",
+      "content": "Quick intro to the platform and how to navigate it.",
+      "attachments": [
+        {
+          "id": "att_001",
+          "signed_link": "https://cdn.example.com/signed/att_001"
+        },
+        {
+          "id": "att_002",
+          "signed_link": "https://cdn.example.com/signed/att_002"
+        }
+      ],
+      "analytics": {
+        "reactions": {
+          "data": {
+            "like": 12,
+            "dislike": 1
+          }
+        },
+        "comments": [
+          {
+            "id": "c_001",
+            "owner": "james",
+            "content": "Nice overview, thanks!",
+            "reactions": {
+              "data": {
+                "like": 3,
+                "dislike": 0
+              }
+            }
+          },
+          {
+            "id": "c_002",
+            "owner": "maria",
+            "content": "Can you add screenshots?",
+            "reactions": {
+              "data": {
+                "like": 1,
+                "dislike": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "post_002",
+      "title": "Weekly Update",
+      "owner": "bob",
+      "content": "This week we shipped two new features and fixed several bugs.",
+      "attachments": [],
+      "analytics": {
+        "reactions": {
+          "data": {
+            "like": 7,
+            "dislike": 0
+          }
+        },
+        "comments": [
+          {
+            "id": "c_003",
+            "owner": "sarah",
+            "content": "Great progress 👏",
+            "reactions": {
+              "data": {
+                "like": 2,
+                "dislike": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "post_003",
+      "title": "Deployment Notes",
+      "owner": "charlie",
+      "content": "Deployed to production at 2:00AM UTC. Monitoring performance.",
+      "attachments": [
+        {
+          "id": "att_003",
+          "signed_link": "https://cdn.example.com/signed/att_003"
+        }
+      ],
+      "analytics": {
+        "reactions": {
+          "data": {
+            "like": 4,
+            "dislike": 1
+          }
+        },
+        "comments": [
+          {
+            "id": "c_004",
+            "owner": "daniel",
+            "content": "Any downtime observed?",
+            "reactions": {
+              "data": {
+                "like": 1,
+                "dislike": 0
+              }
+            }
+          },
+          {
+            "id": "c_005",
+            "owner": "alice",
+            "content": "All good so far. Latency improved slightly.",
+            "reactions": {
+              "data": {
+                "like": 2,
+                "dislike": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "post_004",
+      "title": "Design Proposal",
+      "owner": "diana",
+      "content": "Sharing an updated UI flow for the onboarding screens.",
+      "attachments": [
+        {
+          "id": "att_004",
+          "signed_link": "https://cdn.example.com/signed/att_004"
+        },
+        {
+          "id": "att_005",
+          "signed_link": "https://cdn.example.com/signed/att_005"
+        }
+      ],
+      "analytics": {
+        "reactions": {
+          "data": {
+            "like": 15,
+            "dislike": 2
+          }
+        },
+        "comments": [
+          {
+            "id": "c_006",
+            "owner": "bob",
+            "content": "Looks clean. I like the new step-by-step layout.",
+            "reactions": {
+              "data": {
+                "like": 4,
+                "dislike": 0
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "post_005",
+      "title": "Bug Report",
+      "owner": "eve",
+      "content": "Found an issue in search results ordering when filters are applied.",
+      "attachments": [],
+      "analytics": {
+        "reactions": {
+          "data": {
+            "like": 3,
+            "dislike": 0
+          }
+        },
+        "comments": [
+          {
+            "id": "c_007",
+            "owner": "charlie",
+            "content": "Logged this in Jira. Will investigate today.",
+            "reactions": {
+              "data": {
+                "like": 2,
+                "dislike": 0
+              }
+            }
+          },
+          {
+            "id": "c_008",
+            "owner": "sarah",
+            "content": "I noticed the same thing yesterday.",
+            "reactions": {
+              "data": {
+                "like": 1,
+                "dislike": 0
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+  }
