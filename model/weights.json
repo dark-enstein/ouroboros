@@ -1,0 +1,22 @@
+{
+  "feature_names": [
+    "relevance",
+    "engagement",
+    "recency",
+    "tag_overlap",
+    "network",
+    "social"
+  ],
+  "weights": {
+    "relevance": 1.631249381903638,
+    "engagement": 0.05999199510174771,
+    "recency": 0.09154960362511733,
+    "tag_overlap": 1.786870916933179,
+    "network": 1.2456461260594476,
+    "social": -1.0858859035802062
+  },
+  "bias": -0.6442027736466927,
+  "trained_at": "2026-02-17T15:32:58.875003+00:00",
+  "training_samples": 15,
+  "epochs": 1000
+}

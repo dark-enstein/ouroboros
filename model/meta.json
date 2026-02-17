@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "built_at": "2026-02-17T15:32:58.875393+00:00",
+  "vocab_size": 148,
+  "num_posts": 15,
+  "num_in_network": 5,
+  "num_out_network": 10,
+  "user_id": "user_001",
+  "feature_names": [
+    "relevance",
+    "engagement",
+    "recency",
+    "tag_overlap",
+    "network",
+    "social"
+  ],
+  "artifacts": [
+    "tfidf.pkl",
+    "weights.json",
+    "post_index.json",
+    "meta.json"
+  ]
+}
