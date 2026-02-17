@@ -1,335 +1,167 @@
 {
-"posts_10": [
-{
-    "id": "post_101",
-    "title": "Release Announcement",
-    "owner": "team_lead",
-    "content": "Version 2.1 is live with performance improvements and new UI tweaks.",
-    "attachments": [
+  "posts": [
     {
-        "id": "att_101",
-        "signed_link": "https://cdn.example.com/signed/att_101"
-    }
-    ],
-    "analytics": {
-    "reactions": {
-        "data": {
-        "like": 22,
-        "dislike": 1
-        }
-    },
-    "comments": [
-        {
-        "id": "c_101",
-        "owner": "alice",
-        "content": "Congrats everyone!",
-        "reactions": {
-            "data": {
-            "like": 5,
-            "dislike": 0
-            }
-        }
-        }
-    ]
-    }
-},
-{
-    "id": "post_102",
-    "title": "Maintenance Window",
-    "owner": "ops",
-    "content": "Scheduled maintenance on Saturday 1AM - 2AM UTC.",
-    "attachments": [],
-    "analytics": {
-    "reactions": {
-        "data": {
-        "like": 6,
-        "dislike": 0
-        }
-    },
-    "comments": [
-        {
-        "id": "c_102",
-        "owner": "bob",
-        "content": "Thanks for the heads-up.",
-        "reactions": {
-            "data": {
-            "like": 1,
-            "dislike": 0
-            }
-        }
-        }
-    ]
-    }
-},
-{
-    "id": "post_103",
-    "title": "Feature Request",
-    "owner": "maria",
-    "content": "Can we add tag-based filtering to the posts list?",
-    "attachments": [],
-    "analytics": {
-    "reactions": {
-        "data": {
-        "like": 9,
-        "dislike": 2
-        }
-    },
-    "comments": [
-        {
-        "id": "c_103",
-        "owner": "charlie",
-        "content": "Makes sense. We can propose it for next sprint.",
-        "reactions": {
-            "data": {
-            "like": 2,
-            "dislike": 0
-            }
-        }
-        }
-    ]
-    }
-},
-{
-    "id": "post_104",
-    "title": "Security Update",
-    "owner": "security",
-    "content": "Rotated all signing keys and updated token expiration policies.",
-    "attachments": [
-    {
-        "id": "att_104",
-        "signed_link": "https://cdn.example.com/signed/att_104"
-    }
-    ],
-    "analytics": {
-    "reactions": {
-        "data": {
-        "like": 18,
-        "dislike": 0
-        }
-    },
-    "comments": [
-        {
-        "id": "c_104",
-        "owner": "eve",
-        "content": "Good move. Any action needed from users?",
-        "reactions": {
-            "data": {
-            "like": 2,
-            "dislike": 0
-            }
-        }
-        },
-        {
-        "id": "c_105",
-        "owner": "security",
-        "content": "No user action required.",
-        "reactions": {
-            "data": {
-            "like": 3,
-            "dislike": 0
-            }
-        }
-        }
-    ]
-    }
-},
-{
-    "id": "post_105",
-    "title": "UI Feedback",
-    "owner": "diana",
-    "content": "Please review the updated button styles and spacing changes.",
-    "attachments": [
-    {
-        "id": "att_105",
-        "signed_link": "https://cdn.example.com/signed/att_105"
+      "id": "post_101",
+      "title": "Release Announcement",
+      "owner": "team_lead",
+      "content": "Version 2.1 is live with performance improvements and new UI tweaks.",
+      "tags": ["release", "engineering", "ui"],
+      "created_at": "2026-02-05T08:00:00Z",
+      "attachments": [
+        { "id": "att_101", "signed_link": "https://cdn.example.com/signed/att_101" }
+      ],
+      "analytics": {
+        "reactions": { "data": { "like": 22, "dislike": 1 } },
+        "comments": [
+          { "id": "c_101", "owner": "alice", "content": "Congrats everyone!", "reactions": { "data": { "like": 5, "dislike": 0 } } }
+        ]
+      }
     },
     {
-        "id": "att_106",
-        "signed_link": "https://cdn.example.com/signed/att_106"
-    }
-    ],
-    "analytics": {
-    "reactions": {
-        "data": {
-        "like": 11,
-        "dislike": 1
-        }
+      "id": "post_102",
+      "title": "Maintenance Window",
+      "owner": "ops",
+      "content": "Scheduled maintenance on Saturday 1AM - 2AM UTC.",
+      "tags": ["devops", "maintenance", "infrastructure"],
+      "created_at": "2026-02-04T18:00:00Z",
+      "attachments": [],
+      "analytics": {
+        "reactions": { "data": { "like": 6, "dislike": 0 } },
+        "comments": [
+          { "id": "c_102", "owner": "bob", "content": "Thanks for the heads-up.", "reactions": { "data": { "like": 1, "dislike": 0 } } }
+        ]
+      }
     },
-    "comments": [
-        {
-        "id": "c_106",
-        "owner": "james",
-        "content": "Spacing looks better on mobile now.",
-        "reactions": {
-            "data": {
-            "like": 2,
-            "dislike": 0
-            }
-        }
-        }
-    ]
-    }
-},
-{
-    "id": "post_106",
-    "title": "Performance Metrics",
-    "owner": "analytics_bot",
-    "content": "Avg response time dropped from 480ms to 310ms after caching update.",
-    "attachments": [],
-    "analytics": {
-    "reactions": {
-        "data": {
-        "like": 14,
-        "dislike": 0
-        }
-    },
-    "comments": [
-        {
-        "id": "c_107",
-        "owner": "ops",
-        "content": "Huge improvement. Monitoring memory usage next.",
-        "reactions": {
-            "data": {
-            "like": 3,
-            "dislike": 0
-            }
-        }
-        }
-    ]
-    }
-},
-{
-    "id": "post_107",
-    "title": "Onboarding Guide",
-    "owner": "alice",
-    "content": "Drafted a step-by-step onboarding guide for new contributors.",
-    "attachments": [
     {
-        "id": "att_107",
-        "signed_link": "https://cdn.example.com/signed/att_107"
-    }
-    ],
-    "analytics": {
-    "reactions": {
-        "data": {
-        "like": 10,
-        "dislike": 0
-        }
+      "id": "post_103",
+      "title": "Feature Request",
+      "owner": "maria",
+      "content": "Can we add tag-based filtering to the posts list?",
+      "tags": ["feature-request", "search", "ux"],
+      "created_at": "2026-02-01T11:30:00Z",
+      "attachments": [],
+      "analytics": {
+        "reactions": { "data": { "like": 9, "dislike": 2 } },
+        "comments": [
+          { "id": "c_103", "owner": "charlie", "content": "Makes sense. We can propose it for next sprint.", "reactions": { "data": { "like": 2, "dislike": 0 } } }
+        ]
+      }
     },
-    "comments": [
-        {
-        "id": "c_108",
-        "owner": "maria",
-        "content": "Very helpful. Can we add a FAQ section too?",
-        "reactions": {
-            "data": {
-            "like": 2,
-            "dislike": 0
-            }
-        }
-        }
-    ]
-    }
-},
-{
-    "id": "post_108",
-    "title": "Incident Report",
-    "owner": "ops",
-    "content": "Minor outage occurred for 6 minutes due to a DB connection spike.",
-    "attachments": [],
-    "analytics": {
-    "reactions": {
-        "data": {
-        "like": 5,
-        "dislike": 1
-        }
-    },
-    "comments": [
-        {
-        "id": "c_109",
-        "owner": "team_lead",
-        "content": "Thanks for resolving quickly. Let's add monitoring alerts.",
-        "reactions": {
-            "data": {
-            "like": 1,
-            "dislike": 0
-            }
-        }
-        }
-    ]
-    }
-},
-{
-    "id": "post_109",
-    "title": "Documentation Update",
-    "owner": "charlie",
-    "content": "Updated API docs with new endpoints for reactions and comments.",
-    "attachments": [
     {
-        "id": "att_108",
-        "signed_link": "https://cdn.example.com/signed/att_108"
-    }
-    ],
-    "analytics": {
-    "reactions": {
-        "data": {
-        "like": 8,
-        "dislike": 0
-        }
+      "id": "post_104",
+      "title": "Security Update",
+      "owner": "security",
+      "content": "Rotated all signing keys and updated token expiration policies.",
+      "tags": ["security", "infrastructure", "compliance"],
+      "created_at": "2026-02-03T09:00:00Z",
+      "attachments": [
+        { "id": "att_104", "signed_link": "https://cdn.example.com/signed/att_104" }
+      ],
+      "analytics": {
+        "reactions": { "data": { "like": 18, "dislike": 0 } },
+        "comments": [
+          { "id": "c_104", "owner": "eve", "content": "Good move. Any action needed from users?", "reactions": { "data": { "like": 2, "dislike": 0 } } },
+          { "id": "c_105", "owner": "security", "content": "No user action required.", "reactions": { "data": { "like": 3, "dislike": 0 } } }
+        ]
+      }
     },
-    "comments": [
-        {
-        "id": "c_110",
-        "owner": "diana",
-        "content": "Great, I’ll sync this with the frontend implementation.",
-        "reactions": {
-            "data": {
-            "like": 2,
-            "dislike": 0
-            }
-        }
-        }
-    ]
-    }
-},
-{
-    "id": "post_110",
-    "title": "Sprint Planning",
-    "owner": "bob",
-    "content": "Next sprint focus: search improvements, notifications, and bug fixes.",
-    "attachments": [],
-    "analytics": {
-    "reactions": {
-        "data": {
-        "like": 13,
-        "dislike": 0
-        }
+    {
+      "id": "post_105",
+      "title": "UI Feedback",
+      "owner": "diana",
+      "content": "Please review the updated button styles and spacing changes.",
+      "tags": ["design", "ui", "feedback"],
+      "created_at": "2026-02-04T12:00:00Z",
+      "attachments": [
+        { "id": "att_105", "signed_link": "https://cdn.example.com/signed/att_105" },
+        { "id": "att_106", "signed_link": "https://cdn.example.com/signed/att_106" }
+      ],
+      "analytics": {
+        "reactions": { "data": { "like": 11, "dislike": 1 } },
+        "comments": [
+          { "id": "c_106", "owner": "james", "content": "Spacing looks better on mobile now.", "reactions": { "data": { "like": 2, "dislike": 0 } } }
+        ]
+      }
     },
-    "comments": [
-        {
-        "id": "c_111",
-        "owner": "eve",
-        "content": "Can we prioritize the filter issue from last week?",
-        "reactions": {
-            "data": {
-            "like": 1,
-            "dislike": 0
-            }
-        }
-        },
-        {
-        "id": "c_112",
-        "owner": "bob",
-        "content": "Yes, it’s in the top 3 items.",
-        "reactions": {
-            "data": {
-            "like": 2,
-            "dislike": 0
-            }
-        }
-        }
-    ]
+    {
+      "id": "post_106",
+      "title": "Performance Metrics",
+      "owner": "analytics_bot",
+      "content": "Avg response time dropped from 480ms to 310ms after caching update.",
+      "tags": ["performance", "metrics", "infrastructure"],
+      "created_at": "2026-02-05T06:00:00Z",
+      "attachments": [],
+      "analytics": {
+        "reactions": { "data": { "like": 14, "dislike": 0 } },
+        "comments": [
+          { "id": "c_107", "owner": "ops", "content": "Huge improvement. Monitoring memory usage next.", "reactions": { "data": { "like": 3, "dislike": 0 } } }
+        ]
+      }
+    },
+    {
+      "id": "post_107",
+      "title": "Onboarding Guide",
+      "owner": "alice",
+      "content": "Drafted a step-by-step onboarding guide for new contributors.",
+      "tags": ["onboarding", "guide", "documentation"],
+      "created_at": "2026-01-28T15:00:00Z",
+      "attachments": [
+        { "id": "att_107", "signed_link": "https://cdn.example.com/signed/att_107" }
+      ],
+      "analytics": {
+        "reactions": { "data": { "like": 10, "dislike": 0 } },
+        "comments": [
+          { "id": "c_108", "owner": "maria", "content": "Very helpful. Can we add a FAQ section too?", "reactions": { "data": { "like": 2, "dislike": 0 } } }
+        ]
+      }
+    },
+    {
+      "id": "post_108",
+      "title": "Incident Report",
+      "owner": "ops",
+      "content": "Minor outage occurred for 6 minutes due to a DB connection spike.",
+      "tags": ["incident", "devops", "postmortem"],
+      "created_at": "2026-01-29T03:30:00Z",
+      "attachments": [],
+      "analytics": {
+        "reactions": { "data": { "like": 5, "dislike": 1 } },
+        "comments": [
+          { "id": "c_109", "owner": "team_lead", "content": "Thanks for resolving quickly. Let's add monitoring alerts.", "reactions": { "data": { "like": 1, "dislike": 0 } } }
+        ]
+      }
+    },
+    {
+      "id": "post_109",
+      "title": "Documentation Update",
+      "owner": "charlie",
+      "content": "Updated API docs with new endpoints for reactions and comments.",
+      "tags": ["documentation", "api", "engineering"],
+      "created_at": "2026-02-02T10:00:00Z",
+      "attachments": [
+        { "id": "att_108", "signed_link": "https://cdn.example.com/signed/att_108" }
+      ],
+      "analytics": {
+        "reactions": { "data": { "like": 8, "dislike": 0 } },
+        "comments": [
+          { "id": "c_110", "owner": "diana", "content": "Great, I'll sync this with the frontend implementation.", "reactions": { "data": { "like": 2, "dislike": 0 } } }
+        ]
+      }
+    },
+    {
+      "id": "post_110",
+      "title": "Sprint Planning",
+      "owner": "bob",
+      "content": "Next sprint focus: search improvements, notifications, and bug fixes.",
+      "tags": ["planning", "engineering", "sprint"],
+      "created_at": "2026-02-04T09:00:00Z",
+      "attachments": [],
+      "analytics": {
+        "reactions": { "data": { "like": 13, "dislike": 0 } },
+        "comments": [
+          { "id": "c_111", "owner": "eve", "content": "Can we prioritize the filter issue from last week?", "reactions": { "data": { "like": 1, "dislike": 0 } } },
+          { "id": "c_112", "owner": "bob", "content": "Yes, it's in the top 3 items.", "reactions": { "data": { "like": 2, "dislike": 0 } } }
+        ]
+      }
     }
-}
-]
+  ]
 }

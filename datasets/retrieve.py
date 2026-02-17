@@ -1,36 +1,37 @@
-import json
+from __future__ import annotations
 from core.db import setup_db, Database
-from core.type import Post
+from core.type import Post, ScoredPost, UserData
 from core.models import Engine
 
-class Retriever:
-    def get():
-        pass
 
-class Embedder:
-    def embed(self, raw_json):
-        pass
+class Retriever:
+    def get(self) -> list[Post]:
+        raise NotImplementedError
+
 
 class Embedding(Retriever):
-    embedding = list[Post]
-    engine = Engine
-    post_classification = list[Post]
-    def __init__(vector_db):
-        embedding = get_embedding(vector_db)
+    def __init__(self):
+        self.db = setup_db()
+        self.in_posts: list[Post] = []
+        self.out_posts: list[Post] = []
+        self._load()
 
-    def get(self):
-        return self.embedding
-    
-    def get_innetwork_posts(self, profile_embed):
-        # some logistic regression, or clustering means or ranking algo
-        return Engine.classify_posts(self.embedding, profile_embed)[0]
+    def _load(self):
+        self.in_posts, self.out_posts = self.db.retrieve_by_network()
 
-    def get_outnetwork_posts(self, profile_embed):
-        # some logistic regression, or clustering means or ranking algo
-        return Engine.classify_posts(self.embedding, profile_embed)[1]
+    def get(self) -> list[Post]:
+        return self.in_posts + self.out_posts
 
+    def get_innetwork_posts(self) -> list[Post]:
+        return self.in_posts
 
-def get_embedding(db):
-    db = setup_db()
+    def get_outnetwork_posts(self) -> list[Post]:
+        return self.out_posts
 
-    return db.retrieve_all()
+    def classify(self, user: UserData) -> tuple[list[ScoredPost], list[ScoredPost]]:
+        """Run full classification: embed + score + split by network."""
+        return Engine.classify_posts(self.in_posts, self.out_posts, user)
+
+    def hydrate(self, posts: list[Post]) -> list[Post]:
+        """Hydrate lightweight post stubs with full content."""
+        return [p.hydrate() for p in posts]

@@ -1,72 +1,29 @@
-[
-  {
-    "id": "user_001",
-    "followers": 120,
-    "following": 80,
-    "friends": [
-      {
-        "id": "user_002",
-        "followers": 95,
-        "following": 110,
-        "friends": []
-      },
-      {
-        "id": "user_003",
-        "followers": 300,
-        "following": 150,
-        "friends": []
-      }
-    ]
+{
+  "id": "user_001",
+  "profile": {
+    "name": "Alex Dev",
+    "country": "US",
+    "preferences": "engineering, design, open-source",
+    "photo": [],
+    "verified": true,
+    "interest_tags": ["engineering", "ui", "design", "onboarding", "devops", "performance"]
   },
-  {
-    "id": "user_004",
-    "followers": 45,
-    "following": 60,
-    "friends": [
-      {
-        "id": "user_005",
-        "followers": 210,
-        "following": 90,
-        "friends": []
-      }
-    ]
+  "socialgraph": {
+    "followers": { "len": 120, "chain": ["user_002", "user_003", "user_006"] },
+    "following": { "len": 80, "chain": ["alice", "bob", "charlie", "diana", "eve"] },
+    "friends": ["alice", "bob", "charlie"]
   },
-  {
-    "id": "user_006",
-    "followers": 500,
-    "following": 200,
-    "friends": []
-  },
-  {
-    "id": "user_007",
-    "followers": 15,
-    "following": 25,
-    "friends": [
-      {
-        "id": "user_008",
-        "followers": 70,
-        "following": 40,
-        "friends": []
-      },
-      {
-        "id": "user_009",
-        "followers": 130,
-        "following": 160,
-        "friends": []
-      }
-    ]
-  },
-  {
-    "id": "user_010",
-    "followers": 1000,
-    "following": 300,
-    "friends": [
-      {
-        "id": "user_011",
-        "followers": 620,
-        "following": 410,
-        "friends": []
-      }
+  "anti_filters": {
+    "disliked_posts": ["post_108"],
+    "blocked_owners": [],
+    "blocked_tags": ["spam", "nsfw"],
+    "engagement_history": [
+      { "post_id": "post_001", "action": "like", "timestamp": "2026-02-04T11:00:00Z", "dwell_seconds": 15.0 },
+      { "post_id": "post_004", "action": "like", "timestamp": "2026-02-04T17:00:00Z", "dwell_seconds": 25.0 },
+      { "post_id": "post_004", "action": "click", "timestamp": "2026-02-04T17:01:00Z", "dwell_seconds": 45.0 },
+      { "post_id": "post_101", "action": "like", "timestamp": "2026-02-05T08:30:00Z", "dwell_seconds": 20.0 },
+      { "post_id": "post_106", "action": "click", "timestamp": "2026-02-05T06:15:00Z", "dwell_seconds": 30.0 },
+      { "post_id": "post_108", "action": "dislike", "timestamp": "2026-01-29T04:00:00Z", "dwell_seconds": 3.0 }
     ]
   }
-]
+}

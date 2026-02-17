@@ -1,42 +1,59 @@
 import json
-from core.type import get_current_user, Post, get_current_posts
+import os
+from core.type import UserData, Post, get_current_user, get_current_posts
 
-default_db_files = "datasets\raw\in_network.json,datasets\raw\in_network.json"
-user_file = "datasets\raw\user.json"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-class Database():
-    conn = None
-    state = list[Post] = []
+IN_NETWORK_FILE = os.path.join(BASE_DIR, "datasets", "raw", "in_network.json")
+OUT_NETWORK_FILE = os.path.join(BASE_DIR, "datasets", "raw", "out_network.json")
+USER_FILE = os.path.join(BASE_DIR, "datasets", "raw", "user.json")
 
-    def __init__(conn_string):
-        pass
-    
+
+class Database:
+    def __init__(self, conn_files: list[str]):
+        self.conn_files = conn_files
+        self.state: list[Post] = []
+
     def retrieve_all(self) -> list[Post]:
-        for i in self.conn.split(","):
+        self.state = []
+        for filepath in self.conn_files:
             try:
-                with open(i, 'r', encoding='utf-8') as file:
-                    self.state.append(get_current_posts(json.load(file)))
-
+                with open(filepath, "r", encoding="utf-8") as f:
+                    raw = json.load(f)
+                posts = get_current_posts(raw)
+                self.state.extend(posts)
             except FileNotFoundError:
-                print(f"Error: The file '{i}' was not found.")
+                print(f"[db] file not found: {filepath}")
             except json.JSONDecodeError as e:
-                print(f"Error: Failed to decode JSON. Check file format. Details: {e}")
+                print(f"[db] json decode error in {filepath}: {e}")
+        return self.state
 
-    def create():
-        pass
+    def retrieve_by_network(self) -> tuple[list[Post], list[Post]]:
+        in_posts, out_posts = [], []
+        for filepath in self.conn_files:
+            try:
+                with open(filepath, "r", encoding="utf-8") as f:
+                    raw = json.load(f)
+                posts = get_current_posts(raw)
+                network = "in" if "in_network" in filepath else "out"
+                for p in posts:
+                    p.network = network
+                if network == "in":
+                    in_posts.extend(posts)
+                else:
+                    out_posts.extend(posts)
+            except FileNotFoundError:
+                print(f"[db] file not found: {filepath}")
+            except json.JSONDecodeError as e:
+                print(f"[db] json decode error in {filepath}: {e}")
+        return in_posts, out_posts
 
-    def read():
-        pass
 
-    def write():
-        pass
+def setup_db() -> Database:
+    return Database([IN_NETWORK_FILE, OUT_NETWORK_FILE])
 
-    def delete():
-        pass
 
-def setup_db():
-    return Database(default_db_files)
-
-def get_user():
-    raw = Database(user_file)
+def get_user() -> UserData:
+    with open(USER_FILE, "r", encoding="utf-8") as f:
+        raw = json.load(f)
     return get_current_user(raw)
